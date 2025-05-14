@@ -194,7 +194,7 @@ showPrintGui() {
     printButton := myGui.AddButton("default w100", "Print")
     statusText := myGui.AddText("w300 cGray", "")  ; Status bar / feedback
 
-    cb(*) {
+    handleClick(*) {
         palletId := palletInput.Text
         if palletId = "" {
             statusText.Text := "Please enter a Pallet ID."
@@ -202,6 +202,6 @@ showPrintGui() {
         }
         statusText.Text := "Printing..."
     }
-    printButton.OnEvent("Click", cb)
+    printButton.OnEvent("Click", handleClick)
     myGui.Show("AutoSize Center")
 }

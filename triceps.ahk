@@ -11,12 +11,12 @@ printPalletTag(palletId) {
     WinActivate("ahk_class ThunderRT6MDIForm")
     ControlSend(palletId "{Enter}", "ThunderRT6TextBox30", "ahk_class ThunderRT6MDIForm")
     Sleep 100
-    Send("{F3}")
+    ControlSend("{F3}", "ThunderRT6TextBox30", "ahk_class ThunderRT6MDIForm")
 }
 
 closeForm() {
     WinActivate("ahk_class ThunderRT6MDIForm")
-    Send("{F1}")
+    ControlSend("{F1}", "ThunderRT6TextBox30", "ahk_class ThunderRT6MDIForm")
 }
 
 ControlExists(control, winTitle) {
